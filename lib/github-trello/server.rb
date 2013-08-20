@@ -1,10 +1,15 @@
 require "json"
 require "sinatra/base"
+require "sinatra/config_file"
 require "github-trello/version"
 require "github-trello/http"
 
+
 module GithubTrello
   class Server < Sinatra::Base
+    register Sinatra::ConfigFile
+    config_file 'trello.yml'
+
     post "/posthook" do
       config, http = self.class.config, self.class.http
 
