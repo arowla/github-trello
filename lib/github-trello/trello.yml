@@ -1,7 +1,7 @@
-oauth_token: [764b31cef890691fe0421876b7ba2fb46e43bdf27c11fb354ce4487bf76de86a]
-api_key: [2c076030e5867d15b86e0cfa50ddd77a]
+oauth_token: [ENV['TRELLO_OAUTH_TOKEN']]
+api_key: [ENV['TRELLO_API_KEY']]
 board_ids:
-  [repo name]: [board id]
+  [GSA-OCSIT/hyabusa]: [5tAYyMQv]
 on_start:
   move_to: [list id]
   archive: true
@@ -9,9 +9,9 @@ on_close:
   move_to: [list id]
   archive: true
 # Alternatively, you can specify move_to as a hash of repo name -> list id
-on_close/on_start:
-  move_to:
-    [repo name]: [list id]
+#on_close/on_start:
+#  move_to:
+#    [repo name]: [list id]
 
 # See README for deployment usage
 on_deploy:
