@@ -1,4 +1,5 @@
 source "http://rubygems.org"
-gemspec
 
 gem "rake"
+gem "sinatra"
+gem "sinatra-contrib"
